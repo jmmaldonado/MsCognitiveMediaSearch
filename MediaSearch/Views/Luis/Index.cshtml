@@ -4,6 +4,13 @@
 }
 
 <h2>Index</h2>
+<h1>LUISAppId = @ViewBag.LUISAppId</h1>
+
+@{ 
+    foreach (Uri uri in ViewBag.BlobList) {
+        <p>@uri.ToString()</p>
+    }
+}
 
 <input type="button" id="btnProcess" value="Process" />
 
