@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<input type="button" id="btnProcess" value="Process" />
+
+@section scripts{
+
+    <script type="text/javascript">
+
+        $("#btnProcess").click(function () {
+            alert("Lanzado el proceso!");
+
+            $.ajax({
+                url: '/Luis/ProcessIndex',
+                data: null,
+                type: 'POST'
+
+            }).then(function (result) {
+                alert(result);
+            }).fail(function (msg) {
+                alert(msg.statusText);
+            });
+        });
+
+    </script>
+}

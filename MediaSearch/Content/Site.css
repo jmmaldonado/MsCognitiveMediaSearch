@@ -1,0 +1,74 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/*Search section*/
+
+.search_cnt {
+    margin: 25px 0px 25px 0px;
+    overflow: hidden;
+}
+
+.search_body {
+    position: relative;
+    margin: 6px 0px 6px 0px;
+    height: 120px;
+}
+
+.search_thcnt {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 200px;
+    bottom: 0px;
+}
+
+.search_desccnt {
+    position: absolute;
+    left: 215px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.search_desc {
+    height: 40px;
+    font-size: 14px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+.search_th {
+    position: absolute;
+    margin-top: 5px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    max-height: 108px;
+    max-width: 192px;
+}
+
+.search_audiot {
+    font-size: 12px;
+    line-height: 18px;
+    height: 54px;
+    overflow: hidden;
+    color: green;
+    margin-top: 10px;
+}

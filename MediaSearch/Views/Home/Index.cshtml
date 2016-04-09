@@ -1,0 +1,13 @@
+﻿<div class="row" style="margin-top:50px;">
+
+    <div class="col-md-12">
+        @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+            {
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+                <input type="text" id="query" name="query" class="form-control" placeholder="Escribe palabras clave" aria-describedby="sizing-addon1">
+                <input id="btnSearch" type="submit" class="btn btn-default" value="Search" />
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,106 @@
+﻿@using MediaSearch.Model
+
+<h2>Búsqueda <mark>@ViewBag.Query</mark></h2>
+<div class="row" style="margin-top:50px;">
+
+    <div class="col-md-12">
+        @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+            {
+            <div class="input-group input-group-lg">
+                <span class="input-group-addon" id="sizing-addon1"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></span>
+                <input type="text" id="query" name="query" class="form-control" placeholder="Escribe palabras clave" aria-describedby="sizing-addon1">
+                <input id="btnSearch" type="submit" class="btn btn-default" value="Search" />
+            </div>
+        }
+    </div>
+</div>
+<div class="position:absolute;width:550px;left:0px;top:0px;">
+    @foreach (AudioFile file in Model)
+    {
+        <div class="search_cnt">
+            <div class="search_title">
+                <a href="javascript:PlayVideo('https%3a%2f%2fnimbuspmblu.blob.core.windows.net%2fasset-9412435d-1500-80c3-3147-f1e51ea01a54%2fcb9abbf9-a144-4952-9e86-602fc3155f13.mp4%3fsv%3d2012-02-12%26sr%3dc%26si%3d64be7ba0-7c04-44de-b8b7-f576abc92aaa%26sig%3dwvD7L6%252FQupZOiaa%252Bv05Gb0Zdl%252BC76MgismuodiLqEFI%253D%26se%3d2025-06-26T20%253A50%253A03Z','https://nimbuspmblu.blob.core.windows.net/thumbnails/cb9abbf9-a144-4952-9e86-602fc3155f13_640x360_00.01.50.2893000_1_6-29-2015_8.49%20PM.jpg', '00:00:00')">@file.Title</a>
+            </div>
+            <div class="search_body" id="sb-0">
+                <div class="search_thcnt" id="sthc-0">
+                    <a href="javascript:PlayVideo('https%3a%2f%2fnimbuspmblu.blob.core.windows.net%2fasset-9412435d-1500-80c3-3147-f1e51ea01a54%2fcb9abbf9-a144-4952-9e86-602fc3155f13.mp4%3fsv%3d2012-02-12%26sr%3dc%26si%3d64be7ba0-7c04-44de-b8b7-f576abc92aaa%26sig%3dwvD7L6%252FQupZOiaa%252Bv05Gb0Zdl%252BC76MgismuodiLqEFI%253D%26se%3d2025-06-26T20%253A50%253A03Z','https://nimbuspmblu.blob.core.windows.net/thumbnails/cb9abbf9-a144-4952-9e86-602fc3155f13_640x360_00.01.50.2893000_1_6-29-2015_8.49%20PM.jpg', '00:00:00')" title="Ping 246: Hoverboards, Xbox Gold, HoloLens in space | Ping!"><img class="search_th" id="sth-0" src="~/Content/Audio icon.png"></a>
+                </div>
+                <div class="search_desccnt" id="sd-0">
+                    <div class="search_desc">
+                        <p>@file.Description</p>
+                        <p><a href="https://channel9.msdn.com/Shows/PingShow/Ping-246-Hoverboards-Xbox-Gold-HoloLens-in-space#time=0m39s"></a> <a href="https://channel9.msdn.com/Shows/PingShow/Ping-245-E3-News-Halo-HoloLens-DARPAs-robots-ASL-support">@file.Title </a></p>
+                        <p>
+                            <a href="https://channel9.msdn.com/Shows/PingShow/Ping-246-Hoverboards-Xbox-Gold-HoloLens-in-space#time=2m02s">[02:02]</a> <a href="http://www.theverge.com/tldr/2015/6/24/8837863/hoverboard-lexus-maglev-video">Lexus says it's made a hoverboard</a>
+                            <br>
+                            <a href="https://channel9.msdn.com/Shows/PingShow/Ping-246-Hoverboards-Xbox-Gold-HoloLens-in-space#time=4m07s">[04:07]</a> <a href="http://majornelson.com/2015/06/25/xbox-live-games-with-gold-for-july-2015/?linkId=15120835">Xbox Live Games with Gold for July 2015</a> <br><a href="https://channel9.msdn.com/Shows/PingShow/Ping-246-Hoverboards-Xbox-Gold-HoloLens-in-space#time=6m31s">[06:31]</a> <a href="https://www.youtube.com/watch?v=hL8BBOwupcI">Windows 10 Hero Desktop Image | Behind the Scenes</a>
+                            <br><a href="https://channel9.msdn.com/Shows/PingShow/Ping-246-Hoverboards-Xbox-Gold-HoloLens-in-space#time=8m04s">[08:04]</a> <a href="http://blogs.microsoft.com/firehose/2015/06/25/microsoft-hololens-is-headed-to-the-international-space-station-to-help-astronauts/">Microsoft HoloLens is headed to the International Space Station to help astronauts</a>, <a href="http://www.nasa.gov/press-release/nasa-microsoft-collaborate-to-bring-science-fiction-to-science-fact">NASA, Microsoft Collaborate to Bring Science Fiction to Science Fact</a> <br><a href="https://channel9.msdn.com/Shows/PingShow/Ping-246-Hoverboards-Xbox-Gold-HoloLens-in-space#time=11m12s">[11:12]</a> <a href="http://blog.lenovo.com/en/blog/retro-thinkpad-time-machine?cid=ww:social:200628655:197546521:GOOGLE_PLUS_PAGE:Lenovo:*%20Brand&amp;linkId=15117357">ThinkPad Time Machine?</a>
+                        </p>
+                        <p>Question of the week: <a href="https://channel9.msdn.com/Shows/PingShow/Ping-246-Hoverboards-Xbox-Gold-HoloLens-in-space#time=16m13s">[16:13]</a> What was your favorite Windows default wallpaper throughout the years and what are you using now?</p><p>
+                            Chat with us throughout the week using&nbsp;
+                            <a href="https://twitter.com/search?q=pingshow&amp;src=typd" target="_blank">#PingShow</a> on Twitter
+                        </p><p>Like us on Facebook <a href="http://facebook.com/ThePingShow">http://facebook.com/ThePingShow</a></p><p>Mail us:</p><p>The Ping Show <br>c/o Channel 9, Bldg 20 <br>One Microsoft Way <br>Redmond, WA 98052</p><p><a class="twitter-follow-button" href="http://twitter.com/MarkDeFalco" target="_blank">MarkDeFalco</a> <br><a class="twitter-follow-button" href="http://twitter.com/RicksterCDN" target="_blank">RicksterCDN</a></p>
+                        <img src="http://m.webtrends.com/dcs1wotjh10000w0irc493s0e_6x1g/njs.gif?dcssip=channel9.msdn.com&amp;dcsuri=https://channel9.msdn.com/Feeds/RSS&amp;WT.dl=0&amp;WT.entryid=Entry:RSSView:2c25d4637ce34cd08caca4c4000f589e">
+                    </div>
+                    <div class="search_audiot" id="sa-0">
+                        @foreach (var tm in file.AudioTranscripts)
+                        {
+                            <text><a href="javascript:PlayVideo('@file.Url','/Content/Audio icon.png', '@tm.timeMarker')">@tm.timeMarker </a> ... <span>@tm.audioText</span> ...</text>
+                            <br />
+                        }
+                    </div>
+                    <div class="search_more" id="sm-0">
+                        <span style="float:right"><a href="javascript:showMore('sb-0','sthc-0','sth-0','sd-0','sa-0','sm-0')">More</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    }
+    <div style="position:fixed;width:660px;left:650px;top:106px;">
+        <div id="playercnt" style="height:450px;">
+            <video id="vplayer" width="100%" height="100%" controls="" style="background-color:black;display:none;"></video>
+        </div>
+        <div id="contentmd" style="margin:50px 0px 0px 20px;"></div>
+    </div>
+
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        function PlayVideo(url, poster, st) {
+            var vp = document.getElementById('vplayer');
+            vp.src = url;
+            vp.poster = poster;
+            vp.style.display = 'block';
+            vp.play();
+            var hh = parseInt(st.substring(0, 2), 10);
+            var mm = parseInt(st.substring(3, 5), 10);
+            var ss = parseInt(st.substring(6, 8), 10);
+            vp.addEventListener("canplay", function () { vp.currentTime = (hh * 3600 + mm * 60 + ss); });
+        }
+
+        function showMore(sb, sthc, sth, sd, sa, sm) {
+            document.getElementById(sb).className = 'search_body_m';
+            document.getElementById(sthc).className = 'search_thcnt_m';
+            document.getElementById(sth).className = 'search_th_m';
+            document.getElementById(sd).className = 'search_desccnt_m';
+            document.getElementById(sa).className = 'search_audiot_m';
+
+            var params = "'" + sb + "','" + sthc + "','" + sth + "','" + sd + "','" + sa + "','" + sm + "'";
+            document.getElementById(sm).innerHTML = '<span style="float:right"><a href="javascript:showLess(' + params + ')">Less</a></span>';
+        }
+
+        function showLess(sb, sthc, sth, sd, sa, sm) {
+            document.getElementById(sb).className = 'search_body';
+            document.getElementById(sthc).className = 'search_thcnt';
+            document.getElementById(sth).className = 'search_th';
+            document.getElementById(sd).className = 'search_desccnt';
+            document.getElementById(sa).className = 'search_audiot';
+
+            var params = "'" + sb + "','" + sthc + "','" + sth + "','" + sd + "','" + sa + "','" + sm + "'";
+            document.getElementById(sm).innerHTML = '<span style="float:right"><a href="javascript:showMore(' + params + ')">More</a></span>';
+        }
+
+
+    </script>
+}
