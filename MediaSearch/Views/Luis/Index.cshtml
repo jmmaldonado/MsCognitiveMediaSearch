@@ -1,4 +1,6 @@
-﻿
+﻿@using System.Diagnostics;
+@using CognitiveServices.Model;
+
 @{
     ViewBag.Title = "Index";
 }
@@ -12,7 +14,35 @@
     }
 }
 
+
+@using (Html.BeginForm("uploadTrainingTextFilesToStorageAccount", "Luis", FormMethod.Post, new { enctype = "multipart/form-data" })) {
+    <span>
+        <input type="file" name="files" multiple /> <br>
+        <input type="submit" value="Upload" />
+    </span>
+
+}
+
+
+<div class="container">
+    <div class="inner">
+        @{ 
+            if (ViewData["LUISResponses"] != null) {
+                var responses = (List<LUISResponse>)ViewData["LUISResponses"];
+
+                foreach (var response in responses) {
+                    <p>@response.query</p>
+                    }
+                }
+            }
+    </div>
+</div>
+
+
+
 <input type="button" id="btnProcess" value="Process" />
+<input type="button" id="btnTrain" value="Train LUIS" />
+
 
 @section scripts{
 
@@ -32,6 +62,37 @@
                 alert(msg.statusText);
             });
         });
+
+
+        $("#btnTrain").click(function () {
+            alert("Entrenando a LUIS");
+
+            $.ajax({
+                url: '/Luis/trainLUIS',
+                data: null,
+                type: 'POST'
+
+            }).then(function (result) {
+                @* ESTO NO RULA ... investigar como actualizar la vista con una PartialView
+                @{  
+                    var responses = (List<LUISResponse>)ViewData["LUISResponses"];
+                    string html = "";
+                    foreach (var response in responses) {
+                        html += "<p>" + response.query + "</p>";
+                    }
+                }
+
+                    $(".inner").append(@html);
+                    *@
+
+                    alert("Entrenado!");
+
+
+            }).fail(function (msg) {
+                alert(msg.statusText);
+            });
+        });
+
 
     </script>
 }

@@ -9,6 +9,24 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndexWebJob", "IndexWebJob\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediaSearch.Model", "MediaSearch.Model\MediaSearch.Model.csproj", "{55F5D2C2-BBB4-4D48-B9C7-3BAA7DBA8542}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CognitiveServices.Model", "CognitiveServices.Model\CognitiveServices.Model.csproj", "{D68C273D-08B8-48AF-9540-A46A4DE28D9A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Azure_Functions", "Azure_Functions", "{0A7AB36E-71F5-492D-AE5D-EB2BB29D83E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "getBusinessKeywords", "getBusinessKeywords", "{BBAC6E6D-BA4D-4921-9595-FDABEFF44316}"
+	ProjectSection(SolutionItems) = preProject
+		getBusinessKeywords - project.json = getBusinessKeywords - project.json
+		getBusinessKeywords - README.txt = getBusinessKeywords - README.txt
+		getBusinessKeywords - run.csx = getBusinessKeywords - run.csx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "getLUISAnalysis", "getLUISAnalysis", "{A0E30365-F2FA-4C89-9F97-B36D3D5362B6}"
+	ProjectSection(SolutionItems) = preProject
+		getLUISAnalysis - project.json = getLUISAnalysis - project.json
+		getLUISAnalysis - README.txt = getLUISAnalysis - README.txt
+		getLUISAnalysis - run.csx = getLUISAnalysis - run.csx
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,9 +45,17 @@ Global
 		{55F5D2C2-BBB4-4D48-B9C7-3BAA7DBA8542}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55F5D2C2-BBB4-4D48-B9C7-3BAA7DBA8542}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55F5D2C2-BBB4-4D48-B9C7-3BAA7DBA8542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D68C273D-08B8-48AF-9540-A46A4DE28D9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D68C273D-08B8-48AF-9540-A46A4DE28D9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D68C273D-08B8-48AF-9540-A46A4DE28D9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D68C273D-08B8-48AF-9540-A46A4DE28D9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BBAC6E6D-BA4D-4921-9595-FDABEFF44316} = {0A7AB36E-71F5-492D-AE5D-EB2BB29D83E6}
+		{A0E30365-F2FA-4C89-9F97-B36D3D5362B6} = {0A7AB36E-71F5-492D-AE5D-EB2BB29D83E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\TransientFaultHandling.Core.5.1.1209.1\lib\NET4
